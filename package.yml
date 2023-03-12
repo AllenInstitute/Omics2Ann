@@ -1,0 +1,11 @@
+name: pyAnn
+channels:
+  - defaults
+dependencies:
+  - argparse
+  - pandas
+  - anndata
+  - numpy
+  - scipy
+  - pip:
+    - sys
