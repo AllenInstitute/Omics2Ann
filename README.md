@@ -1,6 +1,6 @@
 Omics2Ann
 =================================================
-![cover](images/sheet_to_text.png)
+![cover](images)
 
 ## About Omics2Ann
 Omics data, such as single-cell RNA sequencing data, contains vast amounts of information that can provide insight into biological processes at the cellular level. However, analysis of this data requires the integration of multiple datasets, each containing different types of information, such as expression levels and metadata. The code presented here provides a framework for integrating multiple CSV files containing gene expression and metadata information into an AnnData object, which can be converted into a h5ad file. The h5ad file can then be uploaded onto Cirrocumulus, a web-based platform for single-cell RNA sequencing data analysis, for further processing and visualization.
@@ -45,7 +45,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
 7. Optionally, to specify data types for metadata fields. Generate a csv file where column 1 is the exact field name and column 2 is the data type.
-* There are several data types you can choose from. See example.txt
+* There are several data types you can choose from. See example.txt [https://github.com/beagan-svg/Omics2Ann/blob/main/example.csv]
 
 | Terms         | Data Types    |
 | ------------- | ------------- |
