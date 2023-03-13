@@ -36,10 +36,15 @@ conda activate pyAnn
 ```
 adata.write_h5ad('Mouse_medulla_10x_rna_rsc_319_integration.h5ad') 
 ```
-5. Run the script by running the following command
+5. Run the script by running the following command to generate the h5ad file
 ```
 python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/umap.coord.csv
 ```
+6 Convert h5ad to cirro format by running the following command. Make sure your in the same directory as the generated h5ad file
+```
+cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
+```
+
 ## Authors and History
 
 * Beagan Nguy - Algorithm Design
