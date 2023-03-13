@@ -67,17 +67,17 @@ def qualityCheck(X, obs, obsm):
         print("\nThe number of rows in X are:{}, The number of rows in obs is: {}".format(X.shape[0], obs.shape[0]))
         raise ValueError("The number of rows in X and obs do not match.")
 
-    # check if the number of columns in X matches the number of rows in obsm
+    # Check if the number of columns in X matches the number of rows in obsm
     if X.shape[0] != obsm.shape[0]:
         print("\nThe number of columns in X is:{}, The number of rows in obs is:{}".format(X.shape[0], obs.shape[0]))
         raise ValueError("The number of columns in X and the number of rows in obsm do not match.")
 
-    # check if the row labels in X match the row labels in obs
+    # Check if the row labels in X match the row labels in obs
     if not X.index.equals(obs.index):
         print("\nThe number of rows in X are: {}, The number of rows in obs are: {}".format(X.index, obs.index))
         raise ValueError("The row labels in X and obs do not match.\n")
 
-    # check if the row labels in X match the row labels in obsm
+    # Check if the row labels in X match the row labels in obsm
     if not X.index.equals(obsm.index):
         print("\nThe number of rows in X are: {}, The number of rows in obsm are: {}".format(X.index, obs.index))
         raise ValueError("The row labels in X and obsm do not match.\n")
