@@ -8,5 +8,6 @@ dependencies:
   - anndata
   - numpy
   - scipy
-  - pip:
-    - sys
+pip:
+  - sys
+
