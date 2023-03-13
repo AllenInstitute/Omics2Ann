@@ -34,7 +34,7 @@ conda activate pyAnn
 ```
 4. Copy create_anndata.py into the working directory and run the script by running the following command
 ```
-python3 create_anndata.py
+python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/umap.coord.csv
 ```
 ## Authors and History
 
