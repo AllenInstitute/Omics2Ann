@@ -22,7 +22,18 @@ Table of Contents
 git clone
 ```
 2. Install the necessary Python packages using Conda
-
+a. Open a terminal and copy packages.yml into a working directory
+```
+```
+b. Navigate to the directory containing packages.yml
+c. Run the following command to create a new conda environment named pyAnn
+```
+conda env create -f packages.yml -n pyAnn
+```
+d. Once the environment is created, activate it by running the following command
+```
+conda activate pyAnn
+```
 ## Authors and History
 
 * Beagan Nguy - Algorithm Design
