@@ -44,6 +44,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 ```
 cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
+7. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
 ## Authors and History
 
