@@ -32,6 +32,10 @@ conda env create -f packages.yml -n pyAnn
 ```
 conda activate pyAnn
 ```
+4. Copy create_anndata.py into the working directory and run the script
+```
+python3 create_anndata.py
+```
 ## Authors and History
 
 * Beagan Nguy - Algorithm Design
