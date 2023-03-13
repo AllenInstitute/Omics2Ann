@@ -28,7 +28,7 @@ https://github.com/beagan-svg/Omics2Ann
 ```
 conda env create -f packages.yml -n pyAnn
 ```
-  - Once the environment is created, activate it by running the following command
+3. Once the environment is created, activate it by running the following command
 ```
 conda activate pyAnn
 ```
