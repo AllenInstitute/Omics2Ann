@@ -32,9 +32,11 @@ conda env create -f packages.yml -n pyAnn
 ```
 conda activate pyAnn
 ```
-4. Copy create_anndata.py into the working directory and modify the line code containing adata.write_h5ad('Mouse_medulla_10x_rna_rsc_319_integration.h5ad'). Change to desired name
-for h5ad file
-
+4. Copy create_anndata.py into the working directory and modify the line code containing 
+```
+adata.write_h5ad('Mouse_medulla_10x_rna_rsc_319_integration.h5ad') 
+```
+Change to desired namefor h5ad file
 5. Run the script by running the following command
 ```
 python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/umap.coord.csv
