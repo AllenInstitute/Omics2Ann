@@ -16,7 +16,7 @@ Table of Contents
 * [Acknowledgments](#acknowledgments)
 * [References](#references)
 
-## Usage
+## Start Guide
 1. Download the files from Github
 ```bash
 https://github.com/beagan-svg/Omics2Ann
