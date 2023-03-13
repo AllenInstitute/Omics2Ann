@@ -46,11 +46,11 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
 7. Optionally, to specify data types for metadata fields. Generate a csv file where column 1 is the exact field name and column 2 is the data type.
 * There are several data types you can choose from. See example.txt
-| Terms  | Data Types |
+| Terms         | Data Types    |
 | ------------- | ------------- |
-| Age  | str or int  |
-| Gender  | str  |
-| Height | float |
+| Age           | str or int    |
+| Gender        | str           |
+| Height        | float         |
 
 8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
