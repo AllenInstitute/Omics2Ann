@@ -52,7 +52,11 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 | Age           | str or int    |
 | Gender        | str           |
 | Height        | float         |
-
+* Once example.csv have been created, move it to the same directory as create_anndata.py
+* Include -dtype as argument when running create_anndata.py by running the following command
+```
+python3 create_anndata.py -dtype example.csv
+```
 8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
 ## Authors and History
