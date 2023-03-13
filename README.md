@@ -17,9 +17,9 @@ Table of Contents
 * [References](#references)
 
 ## Usage
-1. Clone the repository
+1. Download the files from Github
 ```bash
-git clone
+https://github.com/beagan-svg/Omics2Ann
 ```
 2. Install the necessary Python packages using Conda
   a. Open a terminal and copy packages.yml into a working directory
