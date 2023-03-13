@@ -23,8 +23,6 @@ https://github.com/beagan-svg/Omics2Ann
 ```
 2. Install the necessary Python packages using Conda
   - Open a terminal and copy packages.yml into a working directory
-```
-```
   - Navigate to the directory containing packages.yml
   - Run the following command to create a new conda environment named pyAnn
 ```
