@@ -7,9 +7,9 @@ import sys
 
 # Define command line arguments
 parser = argparse.ArgumentParser(description='Process CSV files for AnnData object creation')
-parser.add_argument('--mat', type=str, required=True, help='File path for mat.csv')
-parser.add_argument('--samp', type=str, required=True, help='File path for samp.dat.csv')
-parser.add_argument('--umap', type=str, required=True, help='File path for umap.coord.csv')
+parser.add_argument('-m', '--mat', type=str, required=True, help='File path for mat.csv')
+parser.add_argument('-s', '--samp', type=str, required=True, help='File path for samp.dat.csv')
+parser.add_argument('-u', '--umap', type=str, required=True, help='File path for umap.coord.csv')
 args = parser.parse_args()
 
 # Load the CSV files into pandas dataframes
