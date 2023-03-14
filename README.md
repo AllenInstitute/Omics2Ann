@@ -48,7 +48,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
 7. Optionally, to specify data types for metadata fields. Generate a csv file where column 1 is the exact field name and column 2 is the data type.
-* There are several data types you can choose from. See [example.txt](https://github.com/beagan-svg/Omics2Ann/blob/main/example.csv)
+* There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv)
 
 | Terms         | Data Types    |
 | ------------- | ------------- |
@@ -58,7 +58,7 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 * Once example.csv have been created, move it to the same directory as create_anndata.py
 * Include -dtype as an argument when running create_anndata.py by running the following command
 ```
-python3 create_anndata.py -dtype example.csv
+python3 create_anndata.py -dtype data_types.csv
 ```
 8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
