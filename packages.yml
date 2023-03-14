@@ -1,13 +1,45 @@
-name: pyAnn
+name: geo
 channels:
+  - conda-forge
+  - bioconda
   - defaults
 dependencies:
-  - python=3.8.12
-  - argparse
-  - pandas
-  - anndata
-  - numpy
-  - scipy
-pip:
-  - sys
-
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - bzip2=1.0.8=h7f98852_4
+  - ca-certificates=2022.12.7=ha878542_0
+  - ld_impl_linux-64=2.40=h41732ed_0
+  - libffi=3.4.2=h7f98852_5
+  - libgcc-ng=12.2.0=h65d4601_19
+  - libgomp=12.2.0=h65d4601_19
+  - libnsl=2.0.0=h7f98852_0
+  - libsqlite=3.40.0=h753d276_0
+  - libuuid=2.32.1=h7f98852_1000
+  - libzlib=1.2.13=h166bdaf_4
+  - ncurses=6.3=h27087fc_1
+  - openssl=3.0.8=h0b41bf4_0
+  - pip=23.0.1=pyhd8ed1ab_0
+  - python=3.8.16=he550d4f_1_cpython
+  - readline=8.1.2=h0f457ee_0
+  - setuptools=67.4.0=pyhd8ed1ab_0
+  - tk=8.6.12=h27826a3_0
+  - wheel=0.38.4=pyhd8ed1ab_0
+  - xz=5.2.6=h166bdaf_0
+  - pip:
+    - anndata==0.8.0
+    - certifi==2022.12.7
+    - charset-normalizer==3.0.1
+    - geoparse==2.0.3
+    - h5py==3.8.0
+    - idna==3.4
+    - natsort==8.3.0
+    - numpy==1.24.2
+    - packaging==23.0
+    - pandas==1.5.3
+    - python-dateutil==2.8.2
+    - pytz==2022.7.1
+    - requests==2.28.2
+    - scipy==1.10.1
+    - six==1.16.0
+    - tqdm==4.64.1
+    - urllib3==1.26.14
