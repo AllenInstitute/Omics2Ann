@@ -54,7 +54,7 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 | Age           | str or int    |
 | Gender        | str           |
 | Height        | float         |
-* Once example.csv have been created, move it to the same directory as create_anndata.py
+* Once data_types.csv have been created, move it to the same directory as create_anndata.py
 * Include -dtype as an argument when running create_anndata.py by running the following command
 ```
 python3 create_anndata.py --dtypes data_types.csv
