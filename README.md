@@ -38,7 +38,8 @@ conda activate pyAnn
 python3 create_anndata.py -m path/to/mat.csv \
                           -s path/to/samp.dat.csv \
                           -u path/to/umap.coord.csv \ 
-                          -o h5ad_filename -cirro
+                          -o h5ad_filename \
+                          -cirro
 ```
 - `mat.csv` represents the expression matrix counts (csv format)
 - `samp.dat.csv` represents the metadata file (csv format)
