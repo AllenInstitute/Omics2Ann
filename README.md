@@ -42,11 +42,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 - `umap.cood.csv` represents the file containing the umap coordinates
 - `h5ad_filename` specify the exact filename for the generated h5ad file containing the anndata object
 - `cirro` is a flag that lets the script know to prepare the data for cirrocumulus
-6. Convert h5ad to cirro format by running the following command. Make sure your in the same directory as the generated h5ad file
-```
-cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
-```
-7. `Optionally` to specify data types for metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
+6. `Optionally` to specify data types for metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
 * There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv) as an example
 
 | Terms         | Data Types    |
@@ -59,13 +55,13 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
 python3 create_anndata.py --dtypes data_types.csv
 ```
-8. `Optionally` you can change the working directory with the following flag
+7. `Optionally` you can change the working directory with the following flag
 ```
 python3 create_anndata.py --setwd /path/to/working_directory
 ```
 This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
 
-9. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
+8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
 ## Authors and History
 
