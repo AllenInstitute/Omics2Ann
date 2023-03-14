@@ -42,7 +42,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 - `umap.cood.csv` represents the file containing the umap coordinates
 - `h5ad_filename` specify the exact filename for the generated h5ad file containing the anndata object
 - `cirro` is a flag that lets the script know to prepare the data for cirrocumulus
-6. `Optionally` to specify data types for metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
+6. `Optionally` to specify data types for the metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
 * There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv) as an example
 
 | Terms         | Data Types    |
