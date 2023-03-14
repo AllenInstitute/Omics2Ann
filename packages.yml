@@ -1,4 +1,4 @@
-name: geo
+name: pyAnn
 channels:
   - conda-forge
   - bioconda
