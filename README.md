@@ -46,7 +46,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 ```
 cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
-7. `Optionally` to specify data types for metadata fields. Generate a csv file where column 1 is the exact field name and column 2 is the data type.
+7. `Optionally` to specify data types for metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
 * There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv)
 
 | Terms         | Data Types    |
