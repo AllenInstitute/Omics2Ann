@@ -37,16 +37,16 @@ conda activate pyAnn
 ```
 python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/umap.coord.csv -o h5ad_filename -cirro
 ```
-- mat.csv represents the expression matrix counts (csv format)
-- samp.dat.csv represents the metadata file (csv format)
-- umap.cood.csv represents the file containing the umap coordinates
-- h5ad_filename specify the exact filename for the generated h5ad file containing the anndata object
-- cirro is a flag that lets the script know to prepare the data fro cirrocumulus
+- `mat.csv` represents the expression matrix counts (csv format)
+- `samp.dat.csv` represents the metadata file (csv format)
+- `umap.cood.csv` represents the file containing the umap coordinates
+- `h5ad_filename` specify the exact filename for the generated h5ad file containing the anndata object
+- `cirro` is a flag that lets the script know to prepare the data fro cirrocumulus
 6. Convert h5ad to cirro format by running the following command. Make sure your in the same directory as the generated h5ad file
 ```
 cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
-7. `Optionally`, to specify data types for metadata fields. Generate a csv file where column 1 is the exact field name and column 2 is the data type.
+7. `Optionally` to specify data types for metadata fields. Generate a csv file where column 1 is the exact field name and column 2 is the data type.
 * There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv)
 
 | Terms         | Data Types    |
@@ -59,7 +59,7 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 ```
 python3 create_anndata.py --dtypes data_types.csv
 ```
-8. `Optionally`, you can change the working directory with the following flag
+8. `Optionally` you can change the working directory with the following flag
 ```
 python3 create_anndata.py --setwd /path/to/working_directory
 ```
