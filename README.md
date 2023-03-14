@@ -33,7 +33,7 @@ conda env create -f packages.yml -n pyAnn
 conda activate pyAnn
 ```
 4. Move create_anndata.py into the working directory 
-5. Run the script by running the following command to generate the h5ad file
+5. Run the script by running the following command to generate the h5ad file containing the Anndata object and prepare the data for cirrocumulus
 ```
 python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/umap.coord.csv -o h5ad_filename -cirro
 ```
