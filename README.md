@@ -58,9 +58,13 @@ cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
 * Once example.csv have been created, move it to the same directory as create_anndata.py
 * Include -dtype as an argument when running create_anndata.py by running the following command
 ```
-python3 create_anndata.py -dtype data_types.csv
+python3 create_anndata.py --dtypes data_types.csv
 ```
-8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
+8. Optionally, you can change the working directory with the following flag
+```
+python3 create_anndata.py --setwd /path/to/working_directory
+```
+9. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
 ## Authors and History
 
