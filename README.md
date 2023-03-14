@@ -41,7 +41,7 @@ python3 create_anndata.py -m path/to/mat.csv -s path/to/samp.dat.csv -u path/to/
 - `samp.dat.csv` represents the metadata file (csv format)
 - `umap.cood.csv` represents the file containing the umap coordinates
 - `h5ad_filename` specify the exact filename for the generated h5ad file containing the anndata object
-- `cirro` is a flag that lets the script know to prepare the data fro cirrocumulus
+- `cirro` is a flag that lets the script know to prepare the data for cirrocumulus
 6. Convert h5ad to cirro format by running the following command. Make sure your in the same directory as the generated h5ad file
 ```
 cirro prepare_data --format parquet --no-auto-groups file_name.h5ad
