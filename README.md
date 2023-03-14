@@ -64,6 +64,7 @@ python3 create_anndata.py --dtypes data_types.csv
 ```
 python3 create_anndata.py --setwd /path/to/working_directory
 ```
+This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
 9. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
 
 ## Authors and History
