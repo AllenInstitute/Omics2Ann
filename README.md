@@ -57,11 +57,11 @@ python3 oop_omics2ann.py -m path/to/mat.csv \
 * Once `data_types.csv` have been created, move it to the same directory as create_anndata.py
 * Include `-dtype` as an argument when running create_anndata.py by running the following command
 ```
-python3 create_anndata.py --dtypes data_types.csv
+python3 oop_omics2ann.py --dtypes data_types.csv
 ```
 7. `Optionally` you can change the working directory with the following flag
 ```
-python3 create_anndata.py --setwd /path/to/working_directory
+python3 oop_omics2ann.py --setwd /path/to/working_directory
 ```
 This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
 
