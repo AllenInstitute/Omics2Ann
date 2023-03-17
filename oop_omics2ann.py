@@ -34,15 +34,16 @@ class AnndataCreator:
         Load data type csv file into a dictionary
         '''
         self.type_dict = {}
-        with open(self.data_type_path, 'r') as f:
-            # Iterate over the lines of the file
-            for line in f:
-                # Split each line into a list of values
-                values = line.strip().split(',')
-                # Key = field name, Value = data type
-                field_name = values[0]
-                string_type = values[1]
-                self.type_dict[field_name] = string_type
+        if self.data_type_path != None:
+            with open(self.data_type_path, 'r') as f:
+                # Iterate over the lines of the file
+                for line in f:
+                    # Split each line into a list of values
+                    values = line.strip().split(',')
+                    # Key = field name, Value = data type
+                    field_name = values[0]
+                    string_type = values[1]
+                    self.type_dict[field_name] = string_type
 
     def check_field_names(self):
         '''
