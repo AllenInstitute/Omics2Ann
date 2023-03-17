@@ -32,7 +32,7 @@ conda env create -f packages.yml -n pyAnn
 ```
 conda activate pyAnn
 ```
-4. Move create_anndata.py into the working directory 
+4. `Optionally` Move oop_omics2ann.py into the working directory 
 5. Run the script by running the following command to generate the h5ad file containing the Anndata object and prepare the data for cirrocumulus
 ```
 python3 oop_omics2ann.py -m path/to/mat.csv \
