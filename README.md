@@ -65,7 +65,7 @@ python3 oop_omics2ann.py --setwd /path/to/working_directory
 ```
 This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
 
-8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus) to upload onto Cirrocumulus
+8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus), SEC 2, to upload onto Cirrocumulus
 
 ## Authors and History
 
