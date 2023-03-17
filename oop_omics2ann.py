@@ -3,6 +3,7 @@ import pandas as pd
 import anndata as ad
 import sys
 import os
+import subprocess
 
 class AnndataCreator:
 
@@ -134,9 +135,16 @@ def main():
     parser.add_argument('-dt', '--dtypes', required=False, help='File path for data_types.csv')
     parser.add_argument('-o', '--output', type=str, required=True, help='Output file path for h5ad file. Remember to include the .h5ad extension to the file name')
     parser.add_argument('-wd', '--setwd', type=str, required=False, help='Set the work directory')
+    parser.add_argument('--cirro', action='store_true', help='Run cirro prepare_data command after processing')
     args = parser.parse_args()
     #print(vars(args))
 
+    # Print Arguments
+    print('')
+    for arg in vars(args):
+        print(f"{arg}: {getattr(args, arg)}")
+    print('')
+    
     # Check if working directory exist
     if args.setwd:
         try:
@@ -153,7 +161,7 @@ def main():
     # Load data type file
     creator.load_data_type_file()
 
-    # Check field names
+    # Check data type field names matches metadata fields
     creator.check_field_names()
 
     # Cast columns
@@ -177,6 +185,11 @@ def main():
 
     # Write h5ad file
     creator.write_h5ad_file(args.output)
+
+    # Run cirro prepare_data command if the cirro argument is provided
+    if args.cirro:
+        cmd = ['cirro', 'prepare_data', '--format', 'parquet', '--no-auto-groups', args.output]
+        subprocess.run(cmd)
 
 if __name__ == "__main__":
     main()
