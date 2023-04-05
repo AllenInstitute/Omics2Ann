@@ -4,6 +4,7 @@ import anndata as ad
 import sys
 import os
 import subprocess
+import glob
 
 class AnndataCreator:
 
@@ -112,6 +113,21 @@ class AnndataCreator:
         print(self.umap_df)
         umap_array = self.umap_df.to_numpy()
         self.adata.obsm['X_umap'] = umap_array 
+    
+    def add_multiple_umap(self, umap_file_list):
+        # Split the filename into its base name and extension
+        
+        for upath in umap_file_list:
+            # Get filename from path
+            ufile = os.path.basename(upath)
+            # Find the first instance of '_complete' (Needs to be modified)
+            index = ufile.find('_complete')
+            # Remove every character starting from '_complete' until '.csv' is met
+            umap_key_name = ufile[:index]
+
+            self.umap_df = pd.read_csv(upath, index_col=0)
+            umap_array = self.umap_df.to_numpy()
+            self.adata.obsm[umap_key_name] = umap_array
 
     def write_h5ad_file(self, output_file_path):
         '''
@@ -133,6 +149,7 @@ def main():
     parser.add_argument('-m', '--mat', required=True, help='File path for mat.csv (expression counts matrix)')
     parser.add_argument('-s', '--samp', required=True, help='File path for samp.dat.csv (metadata)')
     parser.add_argument('-u', '--umap', required=False, help='File path for umap.coord.csv (umap coordinates)')
+    parser.add_argument('-mu', '--umap_dir', required=False, help='File path to directory containing umap files (umap coordinates)')
     parser.add_argument('-dt', '--dtypes', required=False, help='File path for data_types.csv')
     parser.add_argument('-o', '--output', type=str, required=True, help='Output file path for h5ad file. Remember to include the .h5ad extension to the file name')
     parser.add_argument('-wd', '--setwd', type=str, required=False, help='Set the work directory')
@@ -177,10 +194,13 @@ def main():
     # Create anndata
     creator.create_anndata()
     
-    if args.umap:
-        # Check UMAP names
+    if args.umap_dir:
+        umap_file_list = glob.glob(os.path.join(args.umap_dir, "*umap*"))
+        creator.add_multiple_umap(umap_file_list)
+    elif args.umap:
+         # Check UMAP names
         creator.check_umap_names()
-
+        
         # Add UMAP
         creator.add_umap()
 
