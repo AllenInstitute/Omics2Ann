@@ -64,6 +64,7 @@ python3 oop_omics2ann.py `--dtypes data_types.csv`
 python3 oop_omics2ann.py `--setwd /path/to/working_directory`
 ```
 This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
+
 8. To add multiple UMAP files, store the UMAP files in a single directory. Then specify the pathway to the directory containing the umap files by running the including the `--umap_dir` flag and running the following command
 ```
 python3 oop_omics2ann.py `--umap_dir /path/to/umap_directory'
