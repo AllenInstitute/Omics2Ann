@@ -59,13 +59,13 @@ python3 oop_omics2ann.py -m path/to/mat.csv \
 ```
 python3 oop_omics2ann.py --dtypes data_types.csv
 ```
-7. `Optionally` you can change the working directory with the following flag
+7. `Optionally` to can change the working directory with the following flag
 ```
 python3 oop_omics2ann.py --setwd /path/to/working_directory
 ```
 This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
 
-8. To add multiple UMAP files, store the UMAP files in a single directory. Then specify the pathway to the directory containing the umap files by including the `--umap_dir` flag into following command
+8. `Optionally` to add multiple UMAP files, store the UMAP files in a single directory. Then specify the pathway to the directory containing the umap files by including the `--umap_dir` flag into following command
 ```
 python3 oop_omics2ann.py --umap_dir /path/to/umap_directory
 ```
