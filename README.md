@@ -57,15 +57,18 @@ python3 oop_omics2ann.py -m path/to/mat.csv \
 * Once `data_types.csv` have been created, move it to the same directory as create_anndata.py
 * Include `-dtype` as an argument when running create_anndata.py by running the following command
 ```
-python3 oop_omics2ann.py --dtypes data_types.csv
+python3 oop_omics2ann.py `--dtypes data_types.csv`
 ```
 7. `Optionally` you can change the working directory with the following flag
 ```
-python3 oop_omics2ann.py --setwd /path/to/working_directory
+python3 oop_omics2ann.py `--setwd /path/to/working_directory`
 ```
 This maybe useful if the expression, metadata, and other supplementary files is stored in a designated directory.
-
-8. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus), SEC 2, to upload onto Cirrocumulus
+8. To add multiple UMAP files, store the UMAP files in a single directory. Then specify the pathway to the directory containing the umap files by running the including the `--umap_dir` flag and running the following command
+```
+python3 oop_omics2ann.py `--umap_dir /path/to/umap_directory'
+```
+9. Follow this page [confluence](http://confluence.corp.alleninstitute.org/pages/viewpage.action?spaceKey=BIOIN&title=Cirrocumulus), SEC 2, to upload onto Cirrocumulus
 
 ## Authors and History
 
