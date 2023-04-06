@@ -92,9 +92,10 @@ class AnndataCreator:
         '''
         Creates an AnnData object with the loaded expression and metadata data frames. The created object is stored in the adata variable
         '''
-        print(self.mat_df)
-        print(self.samp_df)
-        self.adata = ad.AnnData(X=self.mat_df, obs=self.samp_df, dtype=self.mat_df.values.dtype)
+        gene_list = self.mat_df.columns.values.tolist()
+        gene_df = pd.DataFrame(gene_list, columns=['genes'])
+        mat_csr = csr_matrix(self.mat_df)
+        self.adata = ad.AnnData(X=mat_csr, obs=self.samp_df, var=gene_df, dtype=np.float32)
 
     def check_umap_names(self):
         '''
