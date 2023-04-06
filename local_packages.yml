@@ -1,0 +1,41 @@
+name: pyAnn
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - bzip2
+  - ca-certificates
+  - ld_impl_linux-64
+  - libffi
+  - libsqlite
+  - libuuid
+  - libzlib
+  - ncurses
+  - openssl
+  - pip
+  - python=3.8.*
+  - readline
+  - setuptools
+  - tk
+  - wheel
+  - xz
+  - pip:
+      - anndata==0.8.0
+      - certifi
+      - charset-normalizer
+      - geoparse==2.0.3
+      - h5py
+      - idna
+      - natsort
+      - numpy
+      - packaging
+      - pandas
+      - python-dateutil
+      - pytz
+      - requests
+      - scipy
+      - six
+      - tqdm
+      - urllib3
