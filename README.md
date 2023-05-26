@@ -11,7 +11,7 @@ Overall, the integration of multiple datasets and the use of web-based platforms
 
 Table of Contents
 -----------------
-* [Usage](#Start-Guide)
+* [Start Guide](#Start-Guide)
 * [Authors and history](#authors-and-history)
 * [Acknowledgments](#Acknowledgments)
 * [References](#references)
