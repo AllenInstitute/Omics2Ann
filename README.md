@@ -19,7 +19,7 @@ Table of Contents
 ## Start Guide
 1. Download the files from Github
 ```bash
-https://github.com/AllenInstitute//Omics2Ann
+https://github.com/AllenInstitute/Omics2Ann
 ```
 2. Install the necessary Python packages using Conda
   - Open a terminal and copy packages.yml into a working directory
