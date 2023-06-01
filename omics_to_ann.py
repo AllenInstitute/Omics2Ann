@@ -96,7 +96,8 @@ class AnndataCreator:
         '''
         gene_list = self.mat_df.columns.values.tolist()
         gene_df = pd.DataFrame(gene_list, columns=['genes'])
-        mat_csr = csr_matrix(self.mat_df)
+        gene_df = gene_df.reset_index(drop=True) # Set 'genes' column as index
+        mat_csr = csr_matrix(self.mat_df.values) # Use .values to ignore the original index and column names
         self.adata = ad.AnnData(X=mat_csr, obs=self.samp_df, var=gene_df, dtype=np.float32)
 
     def check_umap_names(self):
