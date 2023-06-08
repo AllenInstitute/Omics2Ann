@@ -46,6 +46,7 @@ python3 omics_to_ann.py -m path/to/mat.csv \
 - `umap.cood.csv` represents the file containing the umap coordinates
 - `filename.h5ad` specify the exact filename for the generated h5ad file containing the anndata object. Ex: output.h5ad
 - `cirro` is a flag that lets the script know to prepare the data for cirrocumulus
+
 5b. For including metadata and umap information into an h5ad file, use run the script: h5ad_to_cirro.py
 ```
 python3 h5ad_to_cirro.py -m path/to/filename.h5ad \
