@@ -36,16 +36,25 @@ conda activate pyAnn
 5. Run the script by running the following command to generate the h5ad file containing the Anndata object and prepare the data for cirrocumulus
 ```
 python3 omics_to_ann.py -m path/to/mat.csv \
-                         -s path/to/samp.dat.csv \
-                         -u path/to/umap.coord.csv \ 
-                         -o filename.h5ad \
-                         --cirro
+                        -s path/to/samp.dat.csv \
+                        -u path/to/umap.coord.csv \ 
+                        -o filename.h5ad \
+                        --cirro
 ```
 - `mat.csv` represents the expression matrix counts (csv format)
 - `samp.dat.csv` represents the metadata file (csv format)
 - `umap.cood.csv` represents the file containing the umap coordinates
 - `filename.h5ad` specify the exact filename for the generated h5ad file containing the anndata object. Ex: output.h5ad
 - `cirro` is a flag that lets the script know to prepare the data for cirrocumulus
+5b. For including metadata and umap information into an h5ad file, use run the script: h5ad_to_cirro.py
+```
+python3 h5ad_to_cirro.py -m path/to/filename.h5ad \
+                       -s path/to/samp.dat.csv \
+                       -u path/to/umap.coord.csv \ 
+                       -o filename.h5ad \
+                       --cirro
+```
+> **Note:** Both h5ad_to_cirro.py and omics_to_ann.py requires the following flags to be used `-m`, `s`, `-o`.
 6. `Optionally` to specify data types for the metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
 * There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv) as an example
 
