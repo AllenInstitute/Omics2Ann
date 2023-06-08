@@ -179,8 +179,8 @@ def main():
         %(prog)s -m <expression_count_matrix_file_path> -s <metadata_file_path> -o <output_h5ad_file_path> [--cirro] [-u <umap_file_path>] [-dt <data_types_file_path>] 
     '''
     parser.usage = usage
-    parser.add_argument('-m', '--mat', required=True, help='File path for mat.csv (expression counts matrix)')
-    parser.add_argument('-s', '--samp', required=True, help='File path for samp.dat.csv (metadata)')
+    parser.add_argument('-m', '--mat', required=True, help='File path for mat.csv (expression counts matrix) or h5ad file')
+    parser.add_argument('-s', '--samp', required=False, help='File path for samp.dat.csv (metadata)')
     parser.add_argument('-u', '--umap', required=False, help='File path for umap.coord.csv (umap coordinates)')
     parser.add_argument('-mu', '--umap_dir', required=False, help='File path to directory containing umap files (umap coordinates)')
     parser.add_argument('-dt', '--dtypes', required=False, help='File path for data_types.csv')
