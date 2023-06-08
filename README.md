@@ -50,10 +50,10 @@ python3 omics_to_ann.py -m path/to/mat.csv \
 5b. For including metadata and umap information into an h5ad file, use run the script: h5ad_to_cirro.py
 ```
 python3 h5ad_to_cirro.py -m path/to/filename.h5ad \
-                       -s path/to/samp.dat.csv \
-                       -u path/to/umap.coord.csv \ 
-                       -o filename.h5ad \
-                       --cirro
+                         -s path/to/samp.dat.csv \
+                         -u path/to/umap.coord.csv \ 
+                         -o filename.h5ad \
+                         --cirro
 ```
 > **Note:** Both omics_to_ann.py requires the following flags to be used `-m`, `-s`, `-o`. h5ad_to_cirro.py only requires `-m`, `-o`.
 6. `Optionally` to specify data types for the metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
