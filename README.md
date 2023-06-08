@@ -55,7 +55,7 @@ python3 h5ad_to_cirro.py -m path/to/filename.h5ad \
                        -o filename.h5ad \
                        --cirro
 ```
-> **Note:** Both h5ad_to_cirro.py and omics_to_ann.py requires the following flags to be used `-m`, `s`, `-o`.
+> **Note:** Both h5ad_to_cirro.py and omics_to_ann.py requires the following flags to be used `-m`, `-o`.
 6. `Optionally` to specify data types for the metadata fields. Generate a csv file where first column is the exact field name and the second column is the data type.
 * There are several data types you can choose from. See [data_types.csv](https://github.com/beagan-svg/Omics2Ann/blob/main/data_types.csv) as an example
 
